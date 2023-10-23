@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    /* max-width: 100%; */
+    height: 100vh;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(0, 184, 76, 0.78), rgba(0, 184, 76, 1)), url("../j-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container span {
+    color: #fff;
+}
+.container .log{
+    height: 140px;
+    max-width: 100%;
+    /* overflow: hidden; */
+}
+.container .logo {
+    position: relative;
+    z-index: 1;
+    height: auto;
+    max-width: 100%;
+}
+
+.container .row .rock {
+    position: relative;
+}
+
+.rocket {
+    position: absolute;
+    animation: rocket-fly 4s linear infinite;
+}
+
+.container .row {
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.timer-show {
+    margin: 30px 0 40px 0;
+}
+
+.row .btn {
+    background: rgb(2, 78, 36);
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+    border: none;
+    font-weight: bold;
+}
+
+.row .btn:hover {
+    opacity: 0.87;
+}
+
+.container h2 {
+    padding-top: 20px;
+}
+
+.container h2 span {
+    color: orangered;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 5px rgb(255, 68, 0);
+    font-family: 'Holtwood One SC', serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Roboto', sans-serif;
+    animation: span 4s ease-in-out infinite;
+}
+@keyframes span {
+    0%{
+        color: orangered;
+    }
+    25%{
+        color: red;
+    }
+    50%{
+        color: rgb(2, 78, 36);
+    }
+    75%{
+        color: orangered;
+    }
+    90%{
+        color: rgb(0, 184, 76);
+    }
+    100%{
+        color: #fff;
+    }
+}
+
+.container .row .timer-show div p {
+    font-size: 25px;
+    font-weight: bold;
+}
+.container .row .timer-show {
+    gap: 20px;
+}
+.container .row .timer-show div span {
+    color: black;
+    font-weight: bolder;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.container .text {
+    color: black;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+@keyframes rocket-fly {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 105%;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 2em;
+    }
+
+    .container .logo {
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+
+    .rocket {
+        right: 0;
+    }
+
+    .container .row {
+        height: 90%;
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+    }
+
+    .container .text {
+        font-size: 30px;
+    }
+
+    .container h2 {
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+    .container .row .timer-show div p {
+        font-size: 60px;
+        font-weight: bold;
+    }
+    .container .row .timer-show {
+        gap: 50px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .rocket {
+        right: 0;
+    }
+}
+
+
+
+
+@media (min-width : 1210px) {
+    .container{
+        padding: 40px;
+    }
+    .container .row .timer-show div p {
+        font-size: 100px;
+        font-weight: bold;
+    }
+    .container .row .timer-show {
+        gap: 50px;
+    }
+}
